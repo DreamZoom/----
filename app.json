@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/details",
+    "pages/usercenter/user",
+    "pages/publish/publish"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "校园微任务",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#ffffff"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "任务大厅",
+      "iconPath":"assets/list-over.png",
+      "selectedIconPath":"assets/list.png"
+    }, {
+      "pagePath": "pages/usercenter/user",
+      "text": "个人中心",
+      "iconPath":"assets/user-over.png",
+      "selectedIconPath":"assets/user.png" 
+    }],
+    "selectedColor":"#000",
+    "color":"#ddd"
+  }
+}

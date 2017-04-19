@@ -1,0 +1,25 @@
+
+<!--logs.wxml-->
+<view class="container padding">
+  <view class="input-field">
+    <label>
+      <input placeholder="任务标题" auto-focus bindinput="bindInput" id="title" />
+    </label>
+  </view>
+  <view class="input-field">
+    <label>
+      <textarea id="desc" bindblur="bindTextAreaBlur" auto-height placeholder="任务描述" bindinput="bindInput" />
+    </label>
+  </view>
+  <view class="input-field">
+    <label>
+      <input id="tag" bindinput="bindInput" placeholder="标签" auto-focus/>
+    </label>
+  </view>
+  <view class="input-field">
+    <label>
+      <input id="price" bindinput="bindInput" type="number" placeholder="任务奖金" auto-focus/>
+    </label>
+  </view>
+  <button type="primary" bindtap="bindTap" class="width-100"> 发布任务 </button>
+</view>

@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container ">
+
+  <view class="list-group">
+    <view class="list-item padding" hover-class="list-item-hover">
+      <text class="user-motto">{{task.title}}</text>
+       <image class="list-item-right" src="../../assets/next-over.png"></image>
+    </view>
+    <view class="list-item padding" hover-class="list-item-hover">
+      <text class="user-motto">我发布的任务</text>
+       <image class="list-item-right" src="../../assets/next-over.png"></image>
+    </view>
+    <view class="list-item padding" hover-class="list-item-hover">
+      <text class="user-motto">我的佣金</text>
+       <image class="list-item-right" src="../../assets/next-over.png"></image>
+    </view>
+  </view>
+</view>

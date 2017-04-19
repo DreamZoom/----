@@ -1,0 +1,17 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="list-group">
+    <navigator wx:for="{{tasks}}" wx:key="index" url="./details?id={{item.id}}" hover-class="wx-navigator-hover" class="wx-navigator padding">
+      <view class="task-item">
+        <image class="task-logo image-20" src="../../assets/logo.png"></image>
+        <text class="task-title ellipsis">{{item.title}}</text>
+        <text class="task-price"> {{item.price}}元</text>
+      </view>
+      <image class="image-20" src="../../assets/next-over.png"></image>
+    </navigator>
+  </view>
+  <navigator class="publish" url="../publish/publish">
+    <image class="icon-publish" mode='aspectFit' src="../../assets/edit.png"></image>
+  </navigator>
+</view>
