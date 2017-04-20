@@ -10,8 +10,9 @@
       </view>
       <image class="image-20" src="../../assets/next-over.png"></image>
     </navigator>
+    <navigator wx:if="{{!loadover}}" class="load-more" hover-class="load-more-hover" url="" bindtap="loadmoreClick">点击加载更多</navigator>
   </view>
-  <navigator class="publish" url="../publish/publish">
-    <image class="icon-publish" mode='aspectFit' src="../../assets/edit.png"></image>
-  </navigator>
 </view>
+<navigator class="publish" url="../publish/publish">
+  <image class="icon-publish" mode='aspectFit' src="../../assets/edit.png"></image>
+</navigator>

@@ -17,10 +17,18 @@ module.exports = {
             return result.attributes;
         }
     },
-    getTasks: function (successfun) {
+    reversalrsModel: function (model, result) {
+        for (var f in model) {
+            result.set(f, model[f]);
+        }
+    },
+    getTasks: function (page,successfun) {
         var that = this;
         var query = new Bmob.Query(Task);
         query.descending("updatedAt");
+        var pagesize=10;
+        query.limit(pagesize);
+        query.skip(pagesize*(page-1)); 
         // // 查询所有数据
         query.find({
             success: function (results) {
@@ -57,9 +65,31 @@ module.exports = {
     getTask: function (id, successfun) {
         var that = this;
         var query = new Bmob.Query(Task);
-
         query.get(id, {
             success: function (result) {
+
+                if (successfun) {
+                    successfun(that.convertModel(result));
+                }
+            },
+            error: function (object, error) {
+                // 查询失败
+                console.log(error);
+            }
+        });
+    },
+    updateTask: function (model, successfun) {
+        var that = this;
+        var query = new Bmob.Query(Task);
+        query.get(model.id, {
+            success: function (result) {
+                that.reversalrsModel(model, result);
+                result.save(null, function (response) {
+                    if (successfun) {
+                        successfun(that.convertModel(response));
+                    }
+                });
+
                 if (successfun) {
                     successfun(that.convertModel(result));
                 }

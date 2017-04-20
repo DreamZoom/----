@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import 'weui.wxss';
 
 .container {
   height: 100%;
@@ -86,4 +87,12 @@
 .ellipsis{
   text-overflow:ellipsis;overflow:hidden;white-space:nowrap;
   width: 80%;
+}
+
+.load-more{
+  text-align: center;
+  padding: 10px;
+}
+.load-more-hover{
+  background-color: #ddd;
 }

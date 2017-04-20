@@ -3,16 +3,18 @@
 
   <view class="list-group">
     <view class="list-item padding" hover-class="list-item-hover">
-      <text class="user-motto">{{task.title}}</text>
-       <image class="list-item-right" src="../../assets/next-over.png"></image>
+      <view >标题:{{task.title}}</view>
+       
     </view>
     <view class="list-item padding" hover-class="list-item-hover">
-      <text class="user-motto">我发布的任务</text>
-       <image class="list-item-right" src="../../assets/next-over.png"></image>
+      <text >描述:{{task.desc}}</text>     
     </view>
     <view class="list-item padding" hover-class="list-item-hover">
-      <text class="user-motto">我的佣金</text>
-       <image class="list-item-right" src="../../assets/next-over.png"></image>
+      <text >佣金:{{task.price}}元</text>
     </view>
+    <view class="padding" wx:if="{{task.state==1 || !task.state}}">
+       <button type="primary" bindtap="onGetTask" class="width-100"> 领取任务 </button>
+    </view>
+    
   </view>
 </view>
